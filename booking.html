@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book IPL Ticket - IPL Ticket Booking 2026</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="brand">IPL Ticket Booking 2026</div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="index.html#matches">Matches</a>
+            <a href="booking.html" class="active">Book Ticket</a>
+            <a href="index.html#mybookings">My Bookings</a>
+            <a href="index.html#guidelines">Guidelines</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Book Your IPL Match Tickets</h1>
+        <p>Fill in your details below to reserve your stadium seats.</p>
+        <a href="index.html" class="btn btn-outline">Back to Home</a>
+    </section>
+
+    <main>
+        <section class="card">
+            <h2>Ticket Booking Form</h2>
+
+            <form action="booking.html" method="get">
+                <div class="form-group">
+                    <label for="name">Full Name:</label>
+                    <input type="text" id="name" name="name" minlength="3" maxlength="50"
+                        placeholder="Enter your full name (min 3 characters)" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email" maxlength="100"
+                        placeholder="example@email.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" minlength="10" maxlength="10"
+                        pattern="[0-9]{10}" title="Please enter a valid 10-digit phone number"
+                        placeholder="10-digit mobile number" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="match">Match Selection:</label>
+                    <select id="match" name="match" required>
+                        <option value="">-- Select a Match --</option>
+                        <option value="RCB vs MI">Match 1: RCB vs MI (01-04-2026, Bengaluru)</option>
+                        <option value="CSK vs KKR">Match 2: CSK vs KKR (03-04-2026, Chennai)</option>
+                        <option value="MI vs SRH">Match 3: MI vs SRH (05-04-2026, Mumbai)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="stand">Stand Category:</label>
+                    <select id="stand" name="stand" required>
+                        <option value="">-- Select Stand Category --</option>
+                        <option value="General">General (₹700 - ₹800)</option>
+                        <option value="Premium">Premium (₹1400 - ₹1500)</option>
+                        <option value="VIP">VIP (₹2800 - ₹3000)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="tickets">Number of Tickets (1 to 10):</label>
+                    <input type="number" id="tickets" name="tickets" min="1" max="10"
+                        placeholder="Enter between 1 and 10" required>
+                </div>
+
+                <fieldset class="option-group">
+                    <legend>Ticket Delivery Method:</legend>
+                    <label class="option-item">
+                        <input type="radio" name="delivery" value="e-ticket" required>
+                        E-Ticket (Email &amp; QR Code)
+                    </label>
+                    <label class="option-item">
+                        <input type="radio" name="delivery" value="box-office">
+                        Stadium Box Office Pickup
+                    </label>
+                </fieldset>
+
+                <fieldset class="option-group">
+                    <legend>Additional Preferences:</legend>
+                    <label class="option-item">
+                        <input type="checkbox" name="addon_meal" value="yes">
+                        Add Stadium Meal Combo (+₹300)
+                    </label>
+                    <label class="option-item">
+                        <input type="checkbox" name="sms_updates" value="yes">
+                        Receive SMS match &amp; gate updates
+                    </label>
+                    <label class="option-item">
+                        <input type="checkbox" name="terms" value="accepted" required>
+                        I agree to the Stadium Guidelines &amp; Terms (Required)
+                    </label>
+                </fieldset>
+
+                <div class="form-actions">
+                    <button type="submit">Book Ticket</button>
+                    <button type="reset" class="btn-reset">Reset</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>Copyright &copy; 2026 IPL Ticket Booking. All Rights Reserved.</p>
+    </footer>
+
+</body>
+
+</html>
